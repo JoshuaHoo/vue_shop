@@ -324,6 +324,7 @@ export default {
         if (!valid) return
         // 发起修改用户信息的请求
         const { data: res } = await this.$http.put('users/' + this.editForm.id, { email: this.editForm.email, mobile: this.editForm.mobile })
+        console.log(this.editForm.id)
         if (res.meta.status !== 200) {
           this.$message.error('修改用户信息失败!')
         }
